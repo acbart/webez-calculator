@@ -1,6 +1,12 @@
 import html from "./main.component.html";
 import css from "./main.component.css";
-import { BindAttribute, BindValue, Click, EzComponent, Input, ValueEvent } from '@gsilber/webez';
+import { BindAttribute, BindValue, Change, Click, EzComponent, Input, ValueEvent } from '@gsilber/webez';
+import { BoopButtonComponent } from "./boop-button/boop-button.component";
+import { ImageSelectorComponent } from "./image-selector/image-selector.component";
+import { SimpleCalculatorComponent } from "./simple-calculator/simple-calculator.component";
+import { JokeComponent } from "./joke/joke.component";
+import { BoxEditorComponent } from "./box-editor/box-editor.component";
+import { TimerComponent } from "./timer/timer.component";
 
 /**
  * @description MainComponent is the main component of the app
@@ -9,58 +15,17 @@ import { BindAttribute, BindValue, Click, EzComponent, Input, ValueEvent } from 
  */
 export class MainComponent extends EzComponent {
     
-    @BindAttribute("animal-image", "src")
-    @BindValue("animal-select")
-    animalSelect: string = "assets/babbage.jpg";
+    
 
-    @BindValue("first-number")
-    firstNumber: string = "7";
-
-    @BindValue("second-number")
-    secondNumber: string = "3";
-
-    @BindValue("operation-select")
-    operationSelect: string = "multiply";
-
-    @BindValue("result")
-    result: string = "";
 
     constructor() {
         super(html, css);
+        this.addComponent(new BoopButtonComponent());
+        this.addComponent(new ImageSelectorComponent());
+        this.addComponent(new SimpleCalculatorComponent());
+        this.addComponent(new JokeComponent());
+        this.addComponent(new BoxEditorComponent());
+        this.addComponent(new TimerComponent())
     }
 
-    @Click("calculate-button")
-    calculate() {
-        const firstNumber = +this.firstNumber;
-        const secondNumber = +this.secondNumber;
-        console.log(firstNumber, secondNumber, this.operationSelect);
-        let result = 0;
-        switch (this.operationSelect) {
-            case "add":
-                result = firstNumber + secondNumber;
-                break;
-            case "subtract":
-                result = firstNumber - secondNumber;
-                break;
-            case "multiply":
-                result = firstNumber * secondNumber;
-                break;
-            case "divide":
-                result = firstNumber / secondNumber;
-                break;
-            default:
-                break;
-        }
-        this.result = result.toString();
-    }
-
-    @Input("first-number")
-    onFirstNumberChange(evt: ValueEvent) {
-        this.firstNumber = evt.value;
-    }
-
-    @Input("second-number")
-    onSecondNumberChange(evt: ValueEvent) {
-        this.secondNumber = evt.value;
-    }
 }
