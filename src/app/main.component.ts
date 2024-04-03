@@ -1,14 +1,6 @@
 import html from "./main.component.html";
 import css from "./main.component.css";
-import {
-    BindAttribute,
-    BindValue,
-    Change,
-    Click,
-    EzComponent,
-    Input,
-    ValueEvent,
-} from "@gsilber/webez";
+import { BindValue, EzComponent } from "@gsilber/webez";
 import { BoopButtonComponent } from "./boop-button/boop-button.component";
 import { ImageSelectorComponent } from "./image-selector/image-selector.component";
 import { SimpleCalculatorComponent } from "./simple-calculator/simple-calculator.component";
