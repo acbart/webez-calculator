@@ -15,7 +15,8 @@ import { TimerComponent } from "./timer/timer.component";
  */
 export class MainComponent extends EzComponent {
     
-    
+    @BindValue("special-text")
+    private specialText: string = "Hello from TypeScript!";
 
 
     constructor() {

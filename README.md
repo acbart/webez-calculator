@@ -1,4 +1,4 @@
-# simple-calculator Application
+# Simple WebEZ Examples
 
 Accept the assignment
 Clone the repo
