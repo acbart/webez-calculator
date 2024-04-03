@@ -78,7 +78,7 @@ jobs:
                   echo "============ Git Inspector ==========="
                   # python gitinspector.py ./ -f tsx,ts --grading -F html -x ./gitinspector > ../dist/report.html
                   # gitinspector.py ./src/ --grading --format=html -f tsx,ts,html,css -x > ./dist/report.html
-                  python ./gitinspector/gitinspector.py ./src/ --grading --format=html -f tsx,ts,html,css -x > ./dist/report.html
+                  python ./gitinspector/gitinspector.py ./src/ --grading --format=html -f tsx,ts,html,css -x ./gitinspector > ./dist/report.html
                   echo "======================================"
             - name: Copy over index.md to docs/
               run: |
