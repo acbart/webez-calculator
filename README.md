@@ -1,27 +1,26 @@
 # Simple WebEZ Examples
 
-Accept the assignment
-Clone the repo
-Open the instructions
+## Setup
 
-Install
-- npm install
+- Accept the assignment
+- Clone the repo
+- Open the instructions
+- Install: npm install
+- Run: npm run start
+- View in the browser
+- Try editing the HTML
+- Change the header
+- Add a new p tag
+- Open the JavaScript developer console so you can see errors there.
+  - Some text is normal and fine. You're looking for red boxes that say "Uncaught Error"
 
-Run
-- npm run start
-
-View in the browser
-
-Try editing the HTML
-
-Change the header
+## 1) Basic HTML
 
 Dynamic text from typescript side
 - Add a new span element
 - BindValue a new attribute
 
-Open the JavaScript developer console so you can see errors there.
-- Some text is normal and fine. You're looking for red boxes that say "Uncaught Error"
+## 2) Boop Button Component
 
 Make a new component: Boop Button
 - cd src/app
@@ -34,6 +33,7 @@ Make a new component: Boop Button
   - Try just adding "1", oops that is string concatenation!
   - Need to convert it to a number, do the math, and then convert it back
 	
+## 3) Image Selector Component
 	
 Make a new component: Image Selector
 - webez component image-selector
@@ -43,6 +43,8 @@ Make a new component: Image Selector
 - Add the component at a specific place
 - Wire up the select box to the image
 - Add in @Change events
+
+## 4) Simple Calculator Component
 	
 Make a new component: Simple Calculator
 - webez component simple-calculator
@@ -59,6 +61,8 @@ Make a new component: Simple Calculator
 
 - calculate button
 
+## 5) Joke Component
+
 Make a new component: Joke
 - webez component joke
 - Add the HTML
@@ -69,10 +73,21 @@ Make a new component: Joke
 - BindVisibleToBoolean("punchline") for a visible attribute
 - @Click("reveal")
 
+## 6) Box Editor Component
+
 Make a new component: Box Editor
 - webez component box-editor
 - Create the component and add it to MainComponent, don't forget to import
 - Copy over the given HTML, piece by piece
+- Have to explain the transformer syntax here
 - Handle padding
 - Handle margin
 - Handle background color
+
+## 7) Timer Component
+
+Make a new component: Timer
+- webez component timer
+- Create the component and add it to MainComponent, don't forget to import
+- Add a span to display the time
+- Timer event binding to function that increases the number
