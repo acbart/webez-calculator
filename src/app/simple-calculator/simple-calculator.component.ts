@@ -1,9 +1,15 @@
-import { BindValue, Change, Click, EzComponent, Input, ValueEvent } from "@gsilber/webez";
+import {
+    BindValue,
+    Change,
+    Click,
+    EzComponent,
+    Input,
+    ValueEvent,
+} from "@gsilber/webez";
 import html from "./simple-calculator.component.html";
 import css from "./simple-calculator.component.css";
 
 export class SimpleCalculatorComponent extends EzComponent {
-    
     @BindValue("first-number")
     firstNumber: string = "7";
 
@@ -15,7 +21,7 @@ export class SimpleCalculatorComponent extends EzComponent {
 
     @BindValue("result")
     result: string = "";
-    
+
     constructor() {
         super(html, css);
     }

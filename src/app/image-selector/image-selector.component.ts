@@ -1,4 +1,10 @@
-import { BindAttribute, BindValue, Change, EzComponent, ValueEvent } from "@gsilber/webez";
+import {
+    BindAttribute,
+    BindValue,
+    Change,
+    EzComponent,
+    ValueEvent,
+} from "@gsilber/webez";
 import html from "./image-selector.component.html";
 import css from "./image-selector.component.css";
 

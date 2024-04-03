@@ -1,9 +1,15 @@
-import { BindStyle, BindStyleToNumberAppendPx, BindValue, EzComponent, Input, ValueEvent } from "@gsilber/webez";
+import {
+    BindStyle,
+    BindStyleToNumberAppendPx,
+    BindValue,
+    EzComponent,
+    Input,
+    ValueEvent,
+} from "@gsilber/webez";
 import html from "./box-editor.component.html";
 import css from "./box-editor.component.css";
 
 export class BoxEditorComponent extends EzComponent {
-    
     @BindStyleToNumberAppendPx("box", "padding")
     @BindValue("padding-input", (v: number) => v.toString())
     padding: number = 0;

@@ -6,7 +6,10 @@ describe("SimpleCalculatorComponent", () => {
     let component: any = undefined;
     beforeAll(() => {
         const html: string = `<div>Testing Environment</div><div id='main-target'></div>`;
-        component = bootstrap<SimpleCalculatorComponent>(SimpleCalculatorComponent, html);
+        component = bootstrap<SimpleCalculatorComponent>(
+            SimpleCalculatorComponent,
+            html,
+        );
     });
     describe("Constructor", () => {
         test("Create Instance", () => {

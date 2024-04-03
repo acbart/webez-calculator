@@ -6,7 +6,10 @@ describe("ImageSelectorComponent", () => {
     let component: any = undefined;
     beforeAll(() => {
         const html: string = `<div>Testing Environment</div><div id='main-target'></div>`;
-        component = bootstrap<ImageSelectorComponent>(ImageSelectorComponent, html);
+        component = bootstrap<ImageSelectorComponent>(
+            ImageSelectorComponent,
+            html,
+        );
     });
     describe("Constructor", () => {
         test("Create Instance", () => {
